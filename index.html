@@ -38,6 +38,11 @@
   .steps { color: var(--muted); font-size: 0.9rem; line-height: 1.7; }
   .steps b { color: var(--text); }
   ul.features { color: var(--muted); font-size: 0.92rem; line-height: 1.75; padding-left: 1.1rem; margin: 0; }
+  ul.features b { color: var(--text); font-weight: 600; }
+  .card h2 {
+    font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em;
+    color: var(--muted); margin: 0 0 1rem; font-weight: 600;
+  }
   footer { color: var(--muted); font-size: 0.8rem; text-align: center; margin-top: 2rem; }
   a.plain { color: var(--accent); }
 </style>
@@ -57,12 +62,29 @@
   </div>
 
   <div class="card">
+    <h2>Agents IA en parallèle</h2>
     <ul class="features">
-      <li>Agents autonomes avec leurs missions et leur historique</li>
-      <li>Clients, projets, factures et vault documentaire</li>
-      <li>Stockage local en SQLite, clés dans le trousseau macOS</li>
-      <li>Encoche intégrée : l'app reste joignable fenêtre fermée</li>
+      <li><b>Plusieurs agents autonomes à la fois</b> — chacun son fil d'exécution, sa file de tâches et sa boîte aux lettres ; aucun verrou global, c'est la réclamation atomique d'une tâche en base qui empêche deux agents de se marcher dessus.</li>
+      <li><b>Boucle conversationnelle complète</b> — appel au modèle, exécution d'outils, mise à jour de la base et streaming vers l'interface à chaque tour, avec délégation possible entre agents.</li>
+      <li><b>Compatible OpenAI et modèles locaux</b> — clé API classique ou LM Studio sur le réseau local, à coût nul.</li>
+    </ul>
+  </div>
 
+  <div class="card">
+    <h2>Des outils réels</h2>
+    <ul class="features">
+      <li><b>Shell, calendrier et rappels macOS, recherche web</b> — les agents agissent sur de vrais outils, pas des simulations.</li>
+      <li><b>Pont MCP</b> (Model Context Protocol) — branche des serveurs externes sans code supplémentaire.</li>
+      <li><b>Vault de fichiers avec recherche sémantique</b> — lecture/écriture dans un espace de documents indexé par embeddings.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Gestion du Collectif Cobalt</h2>
+    <ul class="features">
+      <li><b>Missions, clients, prospects, factures, équipes</b> — tout le domaine métier vit dans une base SQLite locale (GRDB).</li>
+      <li><b>Suivi du coût par agent et par mission</b> — chaque appel de modèle est rattaché à ce qu'il a servi.</li>
+      <li><b>Dictée vocale locale</b> — capture rapide via le framework Speech d'Apple, sans rien envoyer ailleurs.</li>
     </ul>
   </div>
 
